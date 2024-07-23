@@ -1,0 +1,2 @@
+/*  tenha o node instalado */
+/* para iniciar o código use o CLI "npm run app" */

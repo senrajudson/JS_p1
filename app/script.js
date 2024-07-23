@@ -11,26 +11,27 @@ const printInput = (e) => {
 // implementar regex para tirar espaços e simbolos 
 const checkPalindrome = (word) => {
 
-  const regex = /[\W\d\s]+/gi;
-  const str = word.replace(regex, "");
-  const wordInverter = str.split("").reverse().join("");
+  const regex = /[\W\s/_/./,/]+/gi;
+  const str = word.replace(regex, "").toLowerCase();
+  const wordInverter = str.split("").reverse().join("").toLowerCase();
   const result = document.getElementById("result");
 
+  console.log(wordInverter);
   console.log(str);
   console.log(str.length);
 
   if (str === "") {
-    alert("Type anything first")
+    alert("Please input a value")
     return
   }
 
-  if (str === wordInverter && str.split("").length > 1) {
-    result.innerText = `${str} Is a palindrome`
-    return console.log(`<p>${`${str} Is a palindrome`}</p>`)
+  if (str === wordInverter) {
+    result.innerText = `${word} is a palindrome`
+    return console.log(`<p>${`${word} is a palindrome`}</p>`)
   };
 
-  result.innerText = `${str} Is not a palindrome`;
-  return console.log(`${str} Is not a palindrome`)
+  result.innerText = `${word} is not a palindrome`;
+  return console.log(`${word} is not a palindrome`)
 };
 
 buttonInput.addEventListener("click", (event) => {
@@ -39,3 +40,6 @@ buttonInput.addEventListener("click", (event) => {
   elementInput.innerText = "";
   elementInput.value ="";
 })
+
+"1 eye for of 1 eye"
+"My age is 0, 0 si ega ym"
