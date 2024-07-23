@@ -19,6 +19,11 @@ const checkPalindrome = (word) => {
   console.log(str);
   console.log(str.length);
 
+  if (str === "") {
+    alert("Type anything first")
+    return
+  }
+
   if (str === wordInverter && str.split("").length > 1) {
     result.innerText = `${str} Is a palindrome`
     return console.log(`<p>${`${str} Is a palindrome`}</p>`)
