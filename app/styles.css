@@ -63,6 +63,7 @@ html,
 
 body {
   margin: 0;
+  max-height: 100vh;
   /* 1 */
   line-height: inherit;
   /* 2 */
